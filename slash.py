@@ -19,3 +19,11 @@ print(os.path.basename(os.path.abspath('.')))
 print(os.path.dirname(os.path.abspath('.')))
 print(os.path.split(os.path.abspath('.')))
 print(os.path.abspath('.').split(os.path.sep))
+
+print(os.path.getsize('.'))
+print(os.listdir('.'))
+
+total_size = 0
+for filename in os.listdir('.'):
+    total_size += os.path.getsize(os.path.join('.', filename))
+print(total_size)
