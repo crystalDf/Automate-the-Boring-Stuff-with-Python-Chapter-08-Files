@@ -59,3 +59,36 @@ print(os.path.isfile(os.path.join(os.getcwd(), './Scripts')))
 print(os.path.isfile(os.path.join(os.getcwd(), './slash.py')))
 print(os.path.isdir(os.path.join(os.getcwd(), './Scripts')))
 print(os.path.isdir(os.path.join(os.getcwd(), './slash.py')))
+
+print()
+
+helloFile = open(os.path.join(os.getcwd(), 'hello.txt'))
+print(helloFile.read())
+helloFile.close()
+
+helloFile = open(os.path.join(os.getcwd(), 'hello.txt'), 'r')
+print(helloFile.read())
+helloFile.close()
+
+print()
+
+sonnetFile = open(os.path.join(os.getcwd(), 'sonnet29.txt'))
+print(sonnetFile.readlines())
+
+print()
+
+baconFile = open(os.path.join(os.getcwd(), 'bacon.txt'), 'w')
+print(baconFile.write('Hello world!\n'))
+baconFile.close()
+
+print()
+
+baconFile = open(os.path.join(os.getcwd(), 'bacon.txt'), 'a')
+print(baconFile.write('Bacon is not a vegetable.'))
+baconFile.close()
+
+print()
+
+baconFile = open(os.path.join(os.getcwd(), 'bacon.txt'))
+print(baconFile.read())
+baconFile.close()
